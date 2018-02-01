@@ -1,0 +1,208 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/app_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="4dp"
+            android:background="@color/colorPrimaryDark"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            android:layout_gravity="top" />
+
+        <!--Post title and author anchored at top-->
+
+        <TextView
+            android:id="@+id/viewPost_textView_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="22dp"
+            android:background="#ffcccccc" />
+
+        <TextView
+            android:id="@+id/viewPost_textView_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textSize="16dp"
+            android:background="#c1e1ec" />
+
+        <!--Post information scroll view-->
+
+        <ScrollView
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/viewPost_textView_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textSize="16dp"
+                    android:background="#ffcccccc"
+                    android:text="DESCRIPTION"/>
+
+                <TextView
+                    android:id="@+id/viewPost_textView_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:gravity="top"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/viewPost_textView_time_left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:gravity="top"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/viewPost_textView_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textSize="16dp"
+                    android:background="#ffcccccc"
+                    android:text="LOCATION"/>
+
+                <TextView
+                    android:id="@+id/viewPost_textView_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:gravity="top"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/viewPost_textView_offers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textSize="16dp"
+                    android:background="#ffcccccc"
+                    android:text="OFFERS"/>
+
+                <ListView
+                    android:id="@+id/viewPost_listView_offers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:background="#87CEFA" >
+                </ListView>
+
+                <TextView
+                    android:id="@+id/viewPost_textView_assignee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textSize="16dp"
+                    android:background="#ffcccccc"
+                    android:text="ASSIGNEE"/>
+
+                <ListView
+                    android:id="@+id/viewPost_listView_assignee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:background="#87CEFA" >
+                </ListView>
+
+                <TextView
+                    android:id="@+id/viewPost_textView_comments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textSize="16dp"
+                    android:background="#ffcccccc"
+                    android:text="COMMENTS"/>
+
+                <ListView
+                    android:id="@+id/viewPost_listView_comments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:background="#ECEFF1">
+                </ListView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <!--Buttons anchored to the bottom-->
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:gravity="center|bottom">
+
+        <Button android:id="@+id/viewPost_button_offer"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_offerHelp" />
+
+        <Button android:id="@+id/viewPost_button_comment"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_add_comment" />
+
+        <Button android:id="@+id/viewPost_button_chat"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_chat" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button android:id="@+id/viewPost_button_complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:padding="20dp"
+                android:text="@string/button_complete" />
+
+            <Button android:id="@+id/viewPost_button_incomplete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:padding="20dp"
+                android:text="@string/button_incomplete" />
+
+        </RelativeLayout>
+
+        <Button android:id="@+id/viewPost_button_review"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_review" />
+
+    </LinearLayout>
+
+</LinearLayout>

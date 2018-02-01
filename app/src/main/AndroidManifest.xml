@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jclg.payitforward">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".PifApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppBaseTheme"
+        >
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key_manifest" />
+
+        <!--Main Activity-->
+        <activity
+            android:name="com.jclg.payitforward.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--Login Activity-->
+        <activity
+            android:name="com.jclg.payitforward.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!--Sign Up Activity-->
+        <activity
+            android:name="com.jclg.payitforward.SignUpActivity"
+            android:label="@string/title_activity_sign_up"
+            android:screenOrientation="portrait">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jclg.payitforward.LoginActivity" />
+        </activity>
+
+        <!--Search Activity-->
+        <activity
+            android:name="com.jclg.payitforward.SearchActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jclg.payitforward.MainActivity" />
+        </activity>
+
+        <!--Search List Mode Activity-->
+        <activity
+            android:name="com.jclg.payitforward.SearchListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jclg.payitforward.SearchActivity" />
+        </activity>
+
+        <!--View Post Activity-->
+        <activity
+            android:name=".ViewPostActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!--Edit Post Activity-->
+        <activity
+            android:name="com.jclg.payitforward.EditPostActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jclg.payitforward.CategoryActivity" />
+        </activity>
+
+        <!--Category Activity-->
+        <activity
+            android:name="com.jclg.payitforward.CategoryActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jclg.payitforward.MainActivity" />
+        </activity>
+
+        <!--View Profile Activity-->
+        <activity
+            android:name=".ViewProfileActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jclg.payitforward.MainActivity" />
+        </activity>
+
+        <!--Edit Profile Activity-->
+        <activity
+            android:name=".EditProfileActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jclg.payitforward.ViewProfileActivity" />
+        </activity>
+
+        <!--View User Profile Activity-->
+        <activity
+            android:name=".ViewUserProfileActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jclg.payitforward.MainActivity" />
+        </activity>
+
+        <!--Manage Posts Activity-->
+        <activity
+            android:name=".ManagePostsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jclg.payitforward.MainActivity" />
+        </activity>
+
+        <!--History Activity-->
+        <activity
+            android:name=".HistoryActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jclg.payitforward.ManagePostsActivity" />
+        </activity>
+
+        <!--Comment Activity-->
+        <activity
+            android:name=".CommentActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jclg.payitforward.ViewPostActivity" />
+        </activity>
+
+        <!--Review Activity-->
+        <activity
+            android:name=".ReviewActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jclg.payitforward.ViewPostActivity" />
+        </activity>
+
+
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+    </application>
+
+</manifest>

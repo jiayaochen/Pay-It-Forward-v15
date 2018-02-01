@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".SignUpActivity">
+
+    <EditText
+        android:id="@+id/User_editText_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:hint="@string/username_hint" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/User_editText_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/User_editText_username"
+        android:layout_below="@+id/User_editText_username"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="@string/password_hint" />
+
+    <EditText
+        android:id="@+id/signup_editText_firstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/User_editText_password"
+        android:layout_below="@+id/User_editText_password"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/firstName_hint" />
+    <EditText
+        android:id="@+id/signup_editText_lastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/signup_editText_firstName"
+        android:layout_below="@+id/signup_editText_firstName"
+        android:ems="10"
+        android:inputType="text|textPersonName"
+        android:hint="@string/lastName_hint" />
+
+    <Spinner
+        android:id="@+id/signup_spinner_emailDomain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/signup_editText_lastName"
+        android:layout_below="@+id/signup_editText_lastName"
+        android:ems="10"/>
+
+
+    <Button
+        android:id="@+id/signup_button_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/signup_spinner_emailDomain"
+        android:layout_below="@+id/signup_spinner_emailDomain"
+        android:text="@string/sign_up_button_label" />
+
+</RelativeLayout>

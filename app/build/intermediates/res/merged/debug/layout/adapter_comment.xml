@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/list_Comment_image"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/comment_linearLayout"/>
+    
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/list_Comment_image"
+        android:layout_toEndOf="@+id/list_Comment_image"
+        android:orientation="vertical"
+        android:id="@+id/comment_linearLayout">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/list_Comment_Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medium Text"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:padding="2dp"
+                android:textColor="#5959AB"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="8dp"
+                android:layout_alignParentStart="true"
+                android:paddingStart="8dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/list_Comment_reply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reply_button"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="8dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/list_Comment_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

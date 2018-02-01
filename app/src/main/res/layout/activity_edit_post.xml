@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/app_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="4dp"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+
+    <!--<EditText-->
+        <!--android:id="@+id/editPost_editText_location"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="top"-->
+        <!--android:hint="@string/post_location_hint"-->
+        <!--android:ems="10" />-->
+
+    <EditText
+        android:id="@+id/editPost_editText_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/post_title_hint" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/post_location_hint" >
+        <requestFocus />
+    </AutoCompleteTextView>
+
+    <!--<EditText-->
+        <!--android:id="@+id/editpost_editText_date"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="@string/post_date_hint"/>-->
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <Button
+            android:id="@+id/editPost_button_setDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="setDate"
+            android:text="@string/date_button_set" />
+
+        <TextView
+            android:id="@+id/editPost_textView_setDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/editPost_button_setDate"
+            android:layout_toEndOf="@+id/editPost_button_setDate"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </RelativeLayout>
+
+    <!--<RelativeLayout-->
+        <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_width="match_parent">-->
+
+        <!--<Spinner-->
+            <!--android:id="@+id/editpost_spinner_12hr_clock"-->
+            <!--android:layout_width="150sp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:ems="10"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_alignParentEnd="true" />-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/editpost_editText_time"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="@string/post_time_hint"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_toLeftOf="@+id/editpost_spinner_12hr_clock"-->
+            <!--android:layout_toStartOf="@+id/editpost_spinner_12hr_clock"/>-->
+    <!--</RelativeLayout>-->
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <Button
+            android:id="@+id/editPost_button_setTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="setTime"
+            android:text="@string/time_button_set" />
+
+        <TextView
+            android:id="@+id/editPost_textView_setTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/editPost_button_setTime"
+            android:layout_toEndOf="@+id/editPost_button_setTime"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/editPost_editText_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.76"
+        android:gravity="top"
+        android:hint="@string/post_content_hint"
+        android:ems="10" />
+
+    <Button android:id="@+id/editPost_button_post"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="@string/button_post"
+        />
+
+</LinearLayout>

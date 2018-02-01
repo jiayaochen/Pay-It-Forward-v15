@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/app_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="4dp"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:layout_gravity="top" />
+
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/review_textView_title"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:padding="10dp"-->
+            <!--android:textSize="25sp"-->
+            <!--android:background="#ffcccccc"-->
+            <!--android:text="Rate and Review"/>-->
+
+        <!--<Button-->
+            <!--android:id="@+id/review_button_submitRating"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_toRightOf="@+id/review_textView_title"-->
+            <!--android:layout_toEndOf="@+id/review_textView_title"-->
+            <!--android:text="Submit" />-->
+
+    <!--</RelativeLayout>-->
+
+    <TextView
+        android:id="@+id/review_textView_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="25sp"
+        android:background="#ffcccccc"
+        android:text="Rate and Review"/>
+
+    <Button
+        android:id="@+id/review_button_submitRating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Submit" />
+
+    <RatingBar
+        android:id="@+id/review_ratingBar_starRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp" />
+
+    <EditText
+        android:id="@+id/review_editText_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:gravity="top"
+        android:hint="Description of your Review"/>
+
+</LinearLayout>
